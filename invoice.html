@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="invoice.css">
+    <title>Invoice</title>
+</head>
+<body>
+    <form id="invoice-form">
+        <h1>Invoice</h1>
+        <div class="invoice-details">
+            <label for="invoice-number">Invoice Number:</label>
+            <input type="text" id="invoice-number" name="invoice-number" required>
+        </div>
+        <div class="invoice-details">
+            <label for="invoice-date">Invoice Date:</label>
+            <input type="date" id="invoice-date" name="invoice-date" required>
+        </div>
+        <div class="invoice-details">
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date" required>
+        </div>
+        <table id="invoice-items">
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+            <!-- You can dynamically add invoice items with JavaScript -->
+        </table>
+        <div class="invoice-details">
+            <button type="button" id="add-item">Add Item</button>
+        </div>
+        <div class="invoice-details">
+            <label for="total">Total:</label>
+            <span id="total-amount">$0.00</span>
+        </div>
+        <div class="invoice-details">
+            <button type="submit">Generate Invoice</button>
+        </div>
+    </form>
+    <script src="invoice.js"></script>
+</body>
+</html>
